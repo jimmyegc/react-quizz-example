@@ -1,0 +1,197 @@
+.questionInactive { 
+  background-color: var(--bg-card); 
+    
+  input[type=radio] {
+    accent-color: var(--color-gray);   
+  }
+
+  .btnAdd {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-gray);
+  }
+
+  .btnAdd:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary); 
+    border-color: var(--color-primary);
+  }
+
+  .btnDelete { 
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-gray);
+  }
+
+  .btnDelete:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary); 
+    border-color: var(--color-primary);
+  }
+  
+  .iconInactive {    
+    color: var(--color-gray);
+    font-size: 1.25rem;
+  } 
+
+  .actionLabel {
+    color: var(--color-primary);
+    margin-left: 0px;
+  } 
+
+  .questionLabel {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+  }
+
+  .label {
+    color: var(--color-gray);
+  }
+  
+}
+
+.questionActive {  
+  
+  background-color: var(--color-primary); 
+
+  .iconActive {    
+    color: var(--color-white);
+    rotate: -90deg;
+    font-size: 1.25rem;
+  }
+
+  .questionLabel {
+    color: #fff;
+    font-size: 1.25rem;
+  }
+
+  .inputActive {
+    color: var(--color-black);  
+  }
+
+  .label {
+    color: #fff;
+  }
+
+  input[type=radio] {
+    accent-color:  var(--color-black) !important;   
+  }
+
+  .btnAdd {
+    border-color: var(--color-gray);
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+
+  .btnAdd:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
+
+  .btnDelete { 
+    background-color: var(--color-white);
+    color: var(--color-black);   
+  }
+
+  .btnDelete:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);    
+  } 
+
+}
+
+.btnDeleteAnswer  { 
+  background-color: var(--color-white);
+    color: var(--color-primary);   
+    border-color: var(--color-primary);
+}
+
+.btnDeleteAnswer:hover  { 
+  background-color: var(--color-primary);   
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.actionLabel {
+  color: var(--color-primary);
+  margin-left: 0px;
+} 
+
+li::marker {
+  color: var(--color-primary);
+}
+
+.inputActive {
+  color: var(--color-black) !important;    
+}
+
+h6 {
+  font-size: 12px !important;
+}
+
+/****************************************************************************/
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}

@@ -1,0 +1,132 @@
+.questionInactive { 
+  background-color: var(--bg-card); 
+    
+  input[type=radio] {
+    accent-color: var(--color-gray);   
+  }
+
+  .btnAdd {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-gray);
+  }
+
+  .btnAdd:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary); 
+    border-color: var(--color-primary);
+  }
+
+  .btnDelete { 
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-gray);
+  }
+
+  .btnDelete:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary); 
+    border-color: var(--color-primary);
+  }
+  
+  .iconInactive {    
+    color: var(--color-gray);
+    font-size: 1.25rem;
+  } 
+
+  .actionLabel {
+    color: var(--color-primary);
+    margin-left: 0px;
+  } 
+
+  .questionLabel {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+  }
+
+  .label {
+    color: var(--color-gray);
+  }
+  
+}
+
+.questionActive {  
+  
+  background-color: var(--color-primary); 
+
+  .iconActive {    
+    color: var(--color-white);
+    rotate: -90deg;
+    font-size: 1.25rem;
+  }
+
+  .questionLabel {
+    color: #fff;
+    font-size: 1.25rem;
+  }
+
+  .inputActive {
+    color: var(--color-black);  
+  }
+
+  .label {
+    color: #fff;
+  }
+
+  input[type=radio] {
+    accent-color:  var(--color-black) !important;   
+  }
+
+  .btnAdd {
+    border-color: var(--color-gray);
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+
+  .btnAdd:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
+
+  .btnDelete { 
+    background-color: var(--color-white);
+    color: var(--color-black);   
+  }
+
+  .btnDelete:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);    
+  } 
+
+}
+
+.btnDeleteAnswer  { 
+  background-color: var(--color-white);
+    color: var(--color-primary);   
+    border-color: var(--color-primary);
+}
+
+.btnDeleteAnswer:hover  { 
+  background-color: var(--color-primary);   
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.actionLabel {
+  color: var(--color-primary);
+  margin-left: 0px;
+} 
+
+li::marker {
+  color: var(--color-primary);
+}
+
+.inputActive {
+  color: var(--color-black) !important;    
+}
+
+h6 {
+  font-size: 12px !important;
+}
+

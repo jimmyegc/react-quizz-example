@@ -1,0 +1,18 @@
+.containerQuizz {
+  width: 30%;
+  height: 100%;  
+  border-radius: var(--boder-radius-gral);
+  border: 1px solid var(--color-boder);
+}
+
+.containerWebForm {
+  width: 70%;
+  height: 100%;    
+}
+
+.bgContainer {
+  background-color: var(--bg-gral-gray);  
+  border-radius: var(--boder-radius-gral);
+  border: 1px solid var(--color-boder);
+  margin: 0 10px;
+}
