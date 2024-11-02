@@ -24,6 +24,12 @@ export const Quizz = () => {
   } = useQuizStore();
 
   const [animate, setAnimate] = useState(false);
+  const [isLocked, setIsLocked] = useState(false); // Estado para controlar si la pregunta está bloqueada
+
+  const handleAnswerSelect = (question, option) => {
+    selectAnswer(question, option);
+    nextQuestion(); // Avanzar automáticamente a la siguiente pregunta
+  };
 
   useEffect(() => {
     setAnimate(false);
@@ -55,23 +61,17 @@ export const Quizz = () => {
                 padding: "20px",
                 border: "1px solid #ccc",
                 borderRadius: "8px",
-                backgroundColor: isCurrent
-                  ? "#f0f8ff"
-                  : isAnswered
-                  ? "#e6f7e6"  // Color verde claro para las preguntas respondidas
-                  : "#fff",    // Color blanco para preguntas no respondidas
+                backgroundColor: isCurrent ? "#f0f8ff" : isAnswered ? "#e6f7e6" : "#fff",
                 cursor: isUnlocked ? "pointer" : "not-allowed",
                 position: "relative",
-                boxShadow: isCurrent
-                  ? "0 0 10px rgba(0, 123, 255, 0.5)"
-                  : "0 0 5px rgba(0,0,0,0.1)",
-                opacity: isAnswered || isCurrent ? 1 : 0.5 // Asegúrate de que las preguntas respondidas sean completamente visibles
+                boxShadow: isCurrent ? "0 0 10px rgba(0, 123, 255, 0.5)" : "0 0 5px rgba(0,0,0,0.1)",
+                opacity: isAnswered || isCurrent ? 1 : 0.5
               }}
             >
               <span style={{ position: "absolute", top: "10px", right: "10px" }}>
                 {isCurrent ? "🔵" : isAnswered ? "✔️" : ""}
               </span>
-              <h3>{`Question ${index + 1}`}</h3>
+              <h3>{`Pregunta ${index + 1}`}</h3>
               <p>{question.question}</p>
 
               <div>
@@ -82,11 +82,8 @@ export const Quizz = () => {
                       name={`question-${index}`}
                       value={option}
                       checked={option === selectedAnswer}
-                      onChange={() => {
-                        selectAnswer(question.question, option);
-                        if (isCurrent) nextQuestion();
-                      }}
-                      style={{ marginRight: "10px" }}
+                      onChange={() => handleAnswerSelect(question.question, option)} // Manejar selección de respuesta
+                      style={{ marginRight: "10px", marginBottom: "10px" }}
                     />
                     <span style={{ color: option === selectedAnswer ? 'blue' : 'black' }}>
                       {option}
@@ -101,14 +98,14 @@ export const Quizz = () => {
 
       <div style={{ marginTop: "20px" }}>
         <button onClick={prevQuestion} disabled={currentQuestionIndex === 0}>
-          Previous
+          Anterior
         </button>
         <button onClick={nextQuestion} disabled={currentQuestionIndex === questions.length - 1}>
-          Next
+          Siguiente
         </button>
       </div>
 
-      <h3>Answers:</h3>
+      <h3>Respuestas:</h3>
       <pre>{JSON.stringify(answers, null, 2)}</pre>
     </div>
   );
