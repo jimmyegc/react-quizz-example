@@ -19,9 +19,10 @@ function App() {
 
   return (
     <div>
+      <Quizz />
       {/* <AnimationComponent /> 
       <Quiz /> 
-      <Quizz />
+      
       <DateTimePickerComponent />
 
       <div>
@@ -36,11 +37,11 @@ function App() {
         <DatePickerWithEnabledDates />  
       </div>*/}
 
-      <WFCDPBlockedDaysConfig />
+     {/*  <WFCDPBlockedDaysConfig />
       <WFCDPBlockedDaysInput />
       <hr />
       <WFCDPEnabledDaysConfig />
-      <WFCDPEnabledDaysInput />
+      <WFCDPEnabledDaysInput /> */}
      </div>
   )
 }
