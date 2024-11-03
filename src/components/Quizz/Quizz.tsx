@@ -27,7 +27,7 @@ export const Quizz = () => {
   const [isLocked, setIsLocked] = useState(false); // Estado para controlar si la pregunta está bloqueada
 
   const handleAnswerSelect = (question, option) => {
-    selectAnswer(question, option);
+    selectAnswer(question, option);    
     nextQuestion(); // Avanzar automáticamente a la siguiente pregunta
   };
 
