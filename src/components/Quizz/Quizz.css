@@ -1,10 +1,21 @@
 .fade-in {
   opacity: 0;
-  transform: scale(0.95);
+  transform: translateY(10px);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .fade-in-active {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.slide-in-active {
+  opacity: 1;
+  transform: translateX(0);
 }
