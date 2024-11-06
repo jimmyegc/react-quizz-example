@@ -37,11 +37,11 @@ function App() {
         <DatePickerWithEnabledDates />  
       </div>*/}
 
-     {/*  <WFCDPBlockedDaysConfig />
+      <WFCDPBlockedDaysConfig />
       <WFCDPBlockedDaysInput />
       <hr />
       <WFCDPEnabledDaysConfig />
-      <WFCDPEnabledDaysInput /> */}
+      <WFCDPEnabledDaysInput /> 
      </div>
   )
 }
