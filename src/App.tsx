@@ -19,24 +19,20 @@ function App() {
 
   return (
     <div>
-      <Quizz />
-      {/* <AnimationComponent /> 
-      <Quiz /> 
-      
+      {/* <Quizz />
+      <AnimationComponent /> 
+      <Quiz />       
       <DateTimePickerComponent />
-
       <div>
         <h1>Gestión de Fechas Bloqueadas</h1>
         <BlockDateConfigurator /> 
         <DatePickerWithExclusions />
       </div>
-
       <div>
         <h1>Gestión de Días Habilitados</h1>
         <EnabledDaysConfigurator />
         <DatePickerWithEnabledDates />  
       </div>*/}
-
       <WFCDPBlockedDaysConfig />
       <WFCDPBlockedDaysInput />
       <hr />
