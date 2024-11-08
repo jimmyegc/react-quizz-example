@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div>
-      {/* <Quizz />
+       <Quizz />{/*
       <AnimationComponent /> 
       <Quiz />       
       <DateTimePickerComponent />
